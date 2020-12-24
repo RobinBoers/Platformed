@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+body {
+/*    width: 1050px;*/
+    width: 80%;
+    height:95%;
+    color: darkblue;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    padding-bottom: 0;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+}
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+html, :root {
+    height:100%;
+}
+button {
+    background-color: deeppink;
+    border-radius: 10px;
+    height: 70px;
+    color: white;
+    border: 3px solid purple;
+    font-size: 40px;
+    width: 30%;
+    font-family: 'Luckiest Guy', cursive;
+}
+#player {
+    position: fixed;
+    bottom:-20px;
+    right: -20px;
+    padding: 20px;
+    padding-left: 40px;
+    text-align: right;
+    background-color: rgb(146, 79, 33);
+    border: 20px solid rgb(73, 39, 16);
+}
+#player h2 {
+    margin:0;
+}
+#coins, #rank, #settings {
+    display: block;
+    font-size:20px;
+    font-weight: normal;
+}
+#status {
+    padding: 20px;
+    padding-right: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+#status * {
+    padding:0;
+    margin:0;
+}
+#dialoog {
+    background-color: rgb(146, 79, 33);
+    border: 20px solid rgb(73, 39, 16);
+    position: fixed;
+    bottom: -20px;
+    left: -20px;
+    padding: 20px;
+}
+.coins {
+    list-style-image: url(../assets/coinsmall.png);
+}
+.settings {
+    list-style-image: url(../assets/settings.png);
+}

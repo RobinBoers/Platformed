@@ -1,0 +1,56 @@
+<!DOCTYPE html>  
+<html style="height: 100%;overflow:hidden;">
+    <head>  
+        <meta charset="utf-8" />
+        <title> Platformed </title>
+        <style>
+            body {
+                margin: 0;
+            }
+            audio {
+                display: none !important;
+            }
+            iframe {
+                border: none;
+                width: 99.7%;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="phaser.min.js"></script>
+        <script type="text/javascript" src="buttons.js"></script>
+    </head>
+    <body style="height: 100% !important">
+        <audio src="assets/music/background.mp3" id="background" controls loop></audio>
+        <iframe style="height: 100%;" src="lobby.php">
+        </iframe>
+        <script>
+            MyLocalStorage = window.localStorage;
+            function checkLogin() {
+                var gamertag = MyLocalStorage.getItem('gamertag');
+                if(!gamertag) {
+                    window.location = 'index.html';
+                } 
+                console.log(":/")
+            }
+            
+            var music = MyLocalStorage.getItem('music');
+            if(!music) {
+                MyLocalStorage.setItem('music', 'unmute');
+                music = MyLocalStorage.getItem('music');
+            }
+            function checkMusic() {
+                var music = MyLocalStorage.getItem('music');
+                if(music === "unmute") {
+                    var audio = document.getElementById("background");
+                    audio.play();
+                }
+                else {
+                    var audio = document.getElementById("background");
+                    audio.pause();
+                }
+            }
+            setInterval(checkMusic, 3000);
+            setInterval(checkLogin, 3000);
+        </script>
+    </body> 
+</html>  

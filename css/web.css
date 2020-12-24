@@ -1,0 +1,113 @@
+body {
+    width: 100% !important;
+    text-align: left;
+    background-color: darkblue;
+    height: 100%;
+    font-family: sans-serif;
+}
+html {
+    background-color: darkblue;
+    height: 100%;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.window {
+    /*  border: 3px solid #f1f1f1;*/
+    border: 3px solid #F0F0F0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.row {
+    padding: 10px;
+/*  background: #f1f1f1;*/
+    background: #F0F0F0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 15%;
+}
+
+.right {
+    width: 10%;
+}
+
+.middle {
+    width: 75%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.dot {
+    margin-top: 4px;
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+input[type=text] {
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    background-color: white;
+    margin-top: -8px;
+    height: 25px;
+    color: #666;
+    padding: 5px;
+}
+
+.bar {
+    width: 17px;
+    height: 3px;
+    background-color: #aaa;
+    margin: 3px 0;
+    display: block;
+}
+
+.content {
+    padding: 10px;
+    background-color: white;
+    height: 100%;
+    overflow:auto;
+}
+iframe {
+   width: 100%;
+   height: 100%;
+}
+.productcover {
+    width: 20%;
+    float: left;
+}
+.producttext {
+    padding-left: 30px;
+}
+.clear {
+    clear: both;
+}
+button {
+    background-color: deeppink;
+    border-radius: 10px;
+    height: 30px;
+    color: white;
+    border: 3px solid purple;
+    margin:10px;
+}

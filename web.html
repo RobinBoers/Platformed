@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Platformed </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/web.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="phaser.min.js"></script>
+    <script type="text/javascript" src="buttons.js"></script>
+</head>
+<body>
+<button onclick="goHomeButton()" id="home">&larr; Back</button>
+<div class="window">
+  <div class="row">
+    <div class="column left">
+      <span class="dot" style="background:#ED594A;"></span>
+      <span class="dot" style="background:#FDD800;"></span>
+      <span class="dot" style="background:#5AC05A;"></span>
+    </div>
+    <div class="column middle">
+      <input type="text" value="https://www.geheimesite.nl">
+    </div>
+    <div class="column right">
+      <div style="float:right">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" id="content">
+    <h3>Yo!</h3>
+    <p>
+        Heyy, dit is je computer. Je kunt ermee <b>chatten</b>, en als je level 10 hebt bereikt kunt er mee <b>hacken</b>
+    </p>
+      <p>
+        <button onclick="go()">Oke</button>
+      </p>
+<script>
+    function go() {
+        MyLocalStorage = window.localStorage;
+        level = parseInt(MyLocalStorage.getItem('level')) - 1;
+        if(level > 10) {
+            var r = confirm("Wil je hacken?");
+            if (r == true) {
+                document.getElementById('content').style.padding = 0;
+                alert("Je bent doorgestuurd naar het hackplatform")
+                document.getElementById('content').innerHTML = "<iframe src='https://www.code.geheimesite.nl/hacking'></iframe>";
+            } else {
+                document.getElementById('content').style.padding = 0;
+                alert("Je bent doorgestuurd naar Nindo, om te chatten")
+                document.getElementById('content').innerHTML = "<iframe src='https://www.geheimesite.nl/library/website/nindo'></iframe>";
+            }
+        } else {
+            document.getElementById('content').style.padding = 0;
+            alert("Je bent doorgestuurd naar Nindo, om te chatten")
+            document.getElementById('content').innerHTML = "<iframe src='https://www.geheimesite.nl/library/website/nindo'></iframe>";
+        }
+    }
+</script>
+  </div>
+</div>
+
+</body>
+</html> 
